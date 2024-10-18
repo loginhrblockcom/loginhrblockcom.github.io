@@ -10,7 +10,7 @@
     <link rel="icon" type="image/png" href="logo.png">
     <title>hrblock.com/login | Los Angeles, CA</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
+     <style>
         * {
             margin: 0;
             padding: 0;
@@ -23,9 +23,10 @@
         }
 
         .head {
-            background: #000;
-            color: #fff;
+            background: #f5f3f7;
+            color: #050505;
             padding: 10px 20px;
+            box-shadow: 0px 2px 5px rgba(128, 128, 128, 0.315);
         }
 
         .head a {
@@ -41,14 +42,17 @@
             font-size: 45px;
             font-weight: bold;
             text-align: center;
+            margin-top: 20px;
         }
 
         h2 {
             color: #000;
             font-size: 30px;
+            margin-top: 20px;
         }
 
-        p {
+        p,
+        ol {
             padding: 10px;
         }
 
@@ -64,81 +68,405 @@
 
         .footer {
             background-color: #000;
-            padding: 5px;
+            padding: 10px;
             color: #fff;
             text-align: center;
+            margin-top: 30px;
         }
+
+        .container {
+            margin-top: 20px;
+
+            padding: 20px;
+            border-radius: 10px;
+          
+        }
+
+        .center {
+            text-align: center;
+        }
+        .timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #ddd;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+
+.timeline-item {
+    padding: 20px;
+    position: relative;
+    width: 50%;
+    min-height: 200px;
+}
+
+.timeline-item.left {
+    left: 0;
+}
+
+.timeline-item.right {
+    left: 50%;
+}
+
+.timeline-content {
+    padding: 20px;
+    background-color: #f1f1f1;
+    position: relative;
+    border-radius: 8px;
+}
+
+.timeline-item.left .timeline-content {
+    margin-right: 25px;
+}
+
+.timeline-item.right .timeline-content {
+    margin-left: 25px;
+}
+
+.timeline-item .number {
+    font-size: 24px;
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.image-placeholder {
+    background-color: #e0e0e0;
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    line-height: 200px;
+    font-size: 24px;
+    color: #555;
+}
+
+/* Circles on the center line */
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: -10px;
+    background-color: white;
+    border: 4px solid #007bff;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.timeline-item.right::before {
+    left: -10px;
+}
+
+/* Responsive for small screens */
+@media (max-width: 768px) {
+    .timeline-item {
+        width: 100%;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .timeline-item.left,
+    .timeline-item.right {
+        left: 0;
+    }
+
+    .timeline-item.right::before {
+        left: 50%;
+    }
+
+    .timeline::after {
+        left: 50%;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 576px) {
+    .timeline-item {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .timeline::after{
+        left: 0;
+    }
+}
+
+.hero {
+    background-image: url('/d9.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adds a dark overlay */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #ff6347;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ff4500;
+}
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.list-group {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.list-group-item {
+    background-color: #fff;
+    border: none;
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.list-group-item:last-child {
+    border-bottom: none;
+}
+
+.list-group-item strong {
+    color: #007bff;
+}
+
+.list-group-item a {
+    color: #28a745;
+    text-decoration: none;
+}
+
+.list-group-item a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .card {
+        padding: 10px;
+    }
+
+    .card-title {
+        font-size: 20px;
+    }
+
+    .list-group-item {
+        font-size: 16px;
+    }
+}
     </style>
 </head>
 
 <body>
-    <div class="head">
-        <p><strong><a href="https://hrblock.com/login">H&R Block Login</a></strong></p>
+    <div class="head py-4">
+        <p class="p-0 m-0 fs-2"><img src="/logo.png" style="width: 50px;" class="mx-2" alt="logo">H&R Block Login</p>
+    </div>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>hrblock.com/login | Los Angeles, CA</h1>
+            <a href="https://ww0.us/?aHR0cHM6Ly9sb2dpbmhyYmxvY2tjb20uZ2l0aHViLmlv" class="btn">hrblock.com Log In Now</a>
+        </div>
+    </section>
+
+    <div class="container mt-5">
+        <h2>What Is hrblock.com/login?</h2>
+        <p>One of the top tax preparation services in the US, can access their account using the URL
+            <a href="https://loginhrblockcom.github.io/">hrblock.com/login</a>. By entering their username and
+            password, users can securely access their accounts on this login page. Customers can review past tax
+            returns, check the status of their current filings, and file their taxes online while logged in, among
+            other things.
+        </p>
+    </div>
+    <div class="">
+        <div class=" mt-5">
+            <h2 class="text-center mb-4">How Do I Create hrblock.com/login Account?</h2>
+           
+            <div class="timeline">
+              
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3><span class="number">01</span>  Visit the website</h3>
+                        <p>Go to <a
+                            href="https://loginhrblockcom.github.io/">hrblock.com/login</a> in your web browser.
+                        Look for a button or link that says "Sign up" or "Create an account." This is the sign-up
+                        button. It's usually located next to the login area.</p>
+                        
+                    </div>
+                </div>
+              
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h3><span class="number">02</span> Enter your details</h3>
+                        <p>Enter your name, email address, and password in the
+                            sign-up form. To protect your account, make sure your password is strong.</p>
+                    </div>
+                </div>
+             
+              
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3><span class="number">03</span>  Accept the terms</h3>
+                        <p>Review H&R Block's privacy statement and terms and
+                            conditions. Tick the box to indicate that you accept them.</p>
+                        
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h3><span class="number">04</span> Submit your details</h3>
+                        <p>Click "Create Account" or "Submit" to complete the
+                            registration process.</p>
+                      
+                    </div>
+                </div>
+                 <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3><span class="number">05</span>  Check your email</h3>
+                        <p>After registering, look for a message from H&R Block
+                            in
+                            your inbox. Open the email and click the link to verify your account.</p>
+                        
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h3><span class="number">06</span> Log In</h3>
+                        <p>Once your account is verified, go back to hrblock.com/login and
+                            enter your email and password to log in.</p>
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="container p-3">
-        <h1>hrblock.com/login | Los Angeles, CA</h1>
-        <center>
-            <a href="https://ww0.us/?aHR0cHM6Ly9sb2dpbmhyYmxvY2tjb20uZ2l0aHViLmlv" class="button-link">
-                <button class="button-50" role="button">Log In Now</button>
-            </a>
-        </center>
-        <h2>What Is hrblock.com/login?</h2><br>
-        <p>One of the top tax preparation services in the US, can access their account using the URL <a href="https://loginhrblockcom.github.io/">hrblock.com/login</a>. By entering their username and password, users can securely access their accounts on this login page. Customers can review past tax returns, check the status of their current filings, and file their taxes online while logged in, among other things</p>
+    <div class="container-fluid">
+        
 
-        <h2>How Do I Create hrblock.com/login Account?</h2>
-        <ol>
-            <li><strong>Visit the website:</strong> Go to <a href="https://loginhrblockcom.github.io/">hrblock.com/login</a>in your web browser. Look for a button or link that says "Sign up" or "Create an account." This is the sign-up button. It's usually located next to the login area.</li>
-           <br>
-            <li><strong>Enter your details:</strong>Enter your name, email address, and password in the sign-up form. To protect your account, make sure your password is strong.</li>
-            <br>
-            <li><strong>Accept the terms:</strong> eview H&R Block's privacy statement and terms and conditions. Tick the box to indicate that you accept them.</li>
-            <br>
-            <li><strong>Enter your details:</strong>Click "Create Account" or "Submit" to complete the registration process.</li>
-  
-            <br>
-            <li><strong>Check your email:</strong> After registering, look for a message from H&R Block in your inbox. Open the email and click the link to verify your account.</li>
-            <br>
-            <li><strong>Log In:</strong>Once your account is verified, go back to hrblock.com/login and enter your email and password to log in</li>
-        </ol>
+        <div class="mt-5">
+         
 
-  
+            <div class="card my-4">
+                <div class="card-body">
+                    <h2 class="card-title">How Do I Login to hrblock.com/login Account?</h2>
+                    <ol class="list-group container p-2">
+                        <li class="list-group-item">
+                            <strong>1. Launch your web browser:</strong> Open your device's web browser. Go to the login page for H&R Block: In the address box, type <a href="https://loginhrblockcom.github.io/">hrblock.com/login</a> then press Enter.
+                        </li>
+                        <li class="list-group-item">
+                            <strong>2. Enter your login information:</strong> Enter your email address and password for your H&R Block account in the designated login fields. Select "Sign In": Click "Sign In" after you've entered your information.
+                        </li>
+                        <li class="list-group-item">
+                            <strong>3. Access your account:</strong> If your email address and password are correct, you can modify your taxes and access other services by logging into your account.
+                        </li>
+                    </ol>
+                </div>
+            </div>
 
-        <h2>How Do I Login hrblock.com/login Account?</h2>
-        <br>
-        <ol>
-            <li><strong>Launch your web browser:</strong> Open your device's web browser. Go to the login page for H&R Block: In the address box, type<a href="https://loginhrblockcom.github.io/">hrblock.com/login</a>then press Enter.</li>
-            <br>
-            <li><strong>Enter your login information:</strong>Enter your email address and password for your H&R Block account in the designated login fields. Select "Sign In": Click "Sign In" after you've entered your information.</li>
-            <br>
-            <li><strong>Access your account:</strong> If your email address and password are correct, you can modify your taxes and access other services by logging into your account.</li>
 
-        </ol>
-
-              <h2>How Do I Reset My hrblock.com/login Password?</h2>
-        <br>
-        <ol>
-            <li><strong>Go to the login page:</strong> Navigate to <a href="https://loginhrblockcom.github.io/">hrblock.com/login</a>.</li>
-            <br>
-            <li><strong>Click "Forgot Password":</strong>On the login page, look for the "Forgot Password?" link and click it.</li>
-            <br>
-            <li><strong>Enter your email address:</strong> If correct, you can manage your taxes.</li>
-<br>
-            <li><strong>Check your email:</strong>  Look for an email from H&R Block in your inbox. This email will contain instructions for resetting your password. If you don't see it, check your spam or junk folder.</li>
-<br>
-            <li><strong>Follow the reset instructions:</strong>Click the link in the email to go to the password reset page. You'll be asked to create a new password.</li>
-<br>
-            <li><strong>Create a new password:</strong> Enter a new password that meets H&R Block's security requirements. Make sure it's strong and unique.</li>
-
-        </ol>
-        <h2>Conclusion</h2>
-    <br>
-        <p>Accessing your H&R Block account is easy. You can create an account, log in, or reset your password effortlessly. H&R Block provides a straightforward way to manage your taxes online.</p>
+       <div class="card">
+    <div class="card-body">
+        <h2 class="card-title">How Do I Reset My hrblock.com/login Password?</h2>
+        <ul class="list-group list-group-flush container p-2">
+            <li class="list-group-item">
+                <strong>• Go to the login page:</strong> Navigate to <a href="https://loginhrblockcom.github.io/">hrblock.com/login</a>.
+            </li>
+            <li class="list-group-item">
+                <strong>• Click "Forgot Password":</strong> On the login page, look for the "Forgot Password?" link and click it.
+            </li>
+            <li class="list-group-item">
+                <strong>• Enter your email address:</strong> If correct, you can manage your taxes.
+            </li>
+            <li class="list-group-item">
+                <strong>• Check your email:</strong> Look for an email from H&R Block in your inbox. This email will contain instructions for resetting your password. If you don't see it, check your spam or junk folder.
+            </li>
+            <li class="list-group-item">
+                <strong>• Follow the reset instructions:</strong> Click the link in the email to go to the password reset page. You'll be asked to create a new password.
+            </li>
+            <li class="list-group-item">
+                <strong>• Create a new password:</strong> Enter a new password that meets H&R Block's security requirements. Make sure it's strong and unique.
+            </li>
+        </ul>
     </div>
+</div>
+
+        </div>
+
+    </div>
+    <div class="container-fluid bg-light text-dark text-center my-3">
+       <div class="card">
+        <h2>Disclaimer</h2>
+        <p>
+            This website is not associated with freetaxusa or any other brand. We are an independent or third-party service provider providing support with our service packages.</p>
+       </div>
+    </div>
+
+
 
     <footer class="footer">
-        <p>© 2024 • All Rights Reserved • <a href="https://hrblock.com/login" style="color: #fff;">hrblock.com/login</a></p>
+        <p>© 2024 • All Rights Reserved • <a href="https://hrblock.com/login" style="color: #fff;">hrblock.com/login</a>
+        </p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </body>
-
 </html>
